@@ -48,6 +48,15 @@
 
 <main id="main">
 
+<!-- ============ 모집 알림 띠 (누르면 팝업이 다시 열림) ============ -->
+<a class="recruit-strip" href="#admission" data-recruit-open>
+  <span class="wrap recruit-strip-inner">
+    <b>2027학년도 전기 대학원 신입생 모집</b>
+    <span class="recruit-strip-date">원서 접수 2026. 11. 2.(월) ~ 11. 9.(월) 18:00</span>
+    <span class="recruit-strip-dday" data-dday hidden></span>
+  </span>
+</a>
+
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-bg" aria-hidden="true"></div>
@@ -162,7 +171,7 @@
       <li><time>2026.05</time><p>인공지능디펜스공학과 신설</p></li>
       <li><time>2026.08</time><p>한화 3사와 동남권 인재양성 협약, 계약정원제 석사과정 합의</p></li>
       <li><time>2026.09</time><p>과기정통부·IITP AX대학원 최종 선정</p></li>
-      <li class="is-next"><time>2027</time><p>D.AX 트랙 첫 신입생 선발</p></li>
+      <li class="is-next"><time>2026.11</time><p>2027학년도 전기 신입생 모집, 2027년 3월 첫 입학</p></li>
       <li class="is-next"><time>2031</time><p>6차년도 사업 완료, 석·박사 250명 배출</p></li>
     </ol>
   </div>
@@ -382,10 +391,17 @@
     </div>
 
     <div class="notice">
-      <h3>모집 일정</h3>
-      <p>D.AX 트랙 첫 신입생은 <b>2027학년도</b>에 선발합니다. 전형 일정과 지원 자격, 제출 서류는 확정되는 대로 이 페이지와 학과 공지사항에 올립니다.</p>
-      <p>미리 상담받고 싶다면 아래 <a href="#contact">문의처</a>로 연락해 주세요. 연구실 인턴십, 캡스톤디자인, 학부연구생으로 먼저 참여할 수도 있습니다.</p>
-      <a class="btn btn-line" href="https://www.changwon.ac.kr/AIDE/na/ntt/selectNttInfo.do?nttSn=1433890&amp;mi=19265" target="_blank" rel="noopener">선정 공지 원문 보기</a>
+      <h3>2027학년도 전기 신입생 모집 <span class="notice-dday" data-dday hidden></span></h3>
+      <dl class="notice-info">
+        <div><dt>원서 접수</dt><dd><b>2026. 11. 2.(월) ~ 11. 9.(월) 18:00</b></dd></div>
+        <div><dt>모집 학과</dt><dd>인공지능융합공학과(운용혁신 AX), 제어계측공학전공(제조혁신 AX)</dd></div>
+        <div><dt>지원</dt><dd>등록금 전액 및 연구비 지원, 한화에어로스페이스 산학장학생 연계</dd></div>
+      </dl>
+      <p>지원 자격과 제출 서류는 국립창원대학교 대학원 모집요강을 따릅니다. 궁금한 점은 아래 <a href="#contact">문의처</a>로 연락해 주세요. 학부생이라면 연구실 인턴십, 캡스톤디자인, 학부연구생으로 먼저 참여할 수도 있습니다.</p>
+      <div class="notice-actions">
+        <button class="btn btn-primary" type="button" data-recruit-open>모집 공지 다시 보기</button>
+        <a class="btn btn-line" href="https://www.changwon.ac.kr/AIDE/na/ntt/selectNttInfo.do?nttSn=1433890&amp;mi=19265" target="_blank" rel="noopener">선정 공지 원문 보기</a>
+      </div>
     </div>
   </div>
 </section>
@@ -618,6 +634,35 @@
     <p class="copy">© 2026 국립창원대학교 D.AX대학원</p>
   </div>
 </footer>
+
+<!-- ============ 모집 공지 팝업 ============ -->
+<div class="recruit" id="recruit" role="dialog" aria-modal="true" aria-labelledby="recruit-title" hidden>
+  <div class="recruit-backdrop" data-recruit-close></div>
+  <div class="recruit-panel">
+    <img class="recruit-banner" src="assets/img/recruit-banner.webp" width="2000" height="239"
+      alt="국립창원대학교 2027학년도 전기 D.AX 대학원 신입생 모집 현수막. 인공지능융합공학과, 제어계측공학전공. 2026년 11월 2일부터 11월 9일 18시까지. 과학기술정보통신부 사업 177억 원, 한화에어로스페이스 산학장학생 연계, 등록금 전액 및 연구비 지원.">
+    <div class="recruit-body">
+      <button class="recruit-x" type="button" data-recruit-close aria-label="모집 공지 닫기"><span aria-hidden="true">×</span></button>
+      <p class="recruit-term">2027학년도 전기</p>
+      <h2 id="recruit-title">D.AX 대학원 신입생 모집</h2>
+      <p class="recruit-dday" data-dday hidden></p>
+      <dl class="recruit-info">
+        <div><dt>원서 접수</dt><dd>2026. 11. 2.(월) ~ 11. 9.(월) 18:00</dd></div>
+        <div><dt>모집 학과</dt><dd>인공지능융합공학과 <small>운용혁신 AX</small><br>제어계측공학전공 <small>제조혁신 AX</small></dd></div>
+        <div><dt>지원</dt><dd>등록금 전액 및 연구비 지원<br>한화에어로스페이스 산학장학생 연계</dd></div>
+        <div><dt>사업</dt><dd>과학기술정보통신부 AX대학원 사업 177억 원</dd></div>
+      </dl>
+      <div class="recruit-actions">
+        <a class="btn btn-primary" href="#admission" data-recruit-close>모집 안내 보기</a>
+        <a class="btn btn-line" href="#contact" data-recruit-close>입학 문의하기</a>
+      </div>
+      <div class="recruit-foot">
+        <label><input type="checkbox" id="recruit-mute"> 오늘 하루 보지 않기</label>
+        <button type="button" class="recruit-close-text" data-recruit-close>닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/main.js" defer></script>
 </body>
