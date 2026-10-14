@@ -1,0 +1,5 @@
+# 원본 발표자료와 로컬 도구 설정은 공개 저장소에 올리지 않는다
+*.pdf
+.claude/
+Thumbs.db
+.DS_Store
