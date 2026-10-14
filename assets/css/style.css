@@ -643,3 +643,26 @@ body.is-locked { overflow: hidden; }
 .notice-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .notice-actions .btn { margin-top: 0; font-family: inherit; cursor: pointer; }
 @media (max-width: 560px) { .notice-info > div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* 사업단 구성과 직책 표시 */
+.leaders { display: grid; grid-template-columns: 1fr 1fr 1.4fr; margin-bottom: 32px; border-top: 2px solid var(--ink); }
+.leaders > div { padding: 16px 20px 18px 0; border-bottom: 1px solid var(--line); }
+.leaders > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.leaders dt { font-size: .875rem; font-weight: 700; color: var(--ink-soft); }
+.leaders dd { margin-top: 4px; font-size: var(--step-1); font-weight: 800; line-height: 1.5; }
+.leaders small { font-size: .8125rem; font-weight: 600; color: var(--ink-soft); margin-left: 4px; }
+.people .role {
+  display: inline-block; margin-left: 8px; padding: 1px 8px; vertical-align: 2px;
+  font-style: normal; font-size: .75rem; font-weight: 700; line-height: 1.6;
+  color: var(--white); background: var(--g); border-radius: 3px;
+}
+.people .role-head { background: var(--navy); }
+@media (max-width: 760px) {
+  .leaders { grid-template-columns: 1fr; }
+  .leaders > div + div { padding-left: 0; border-left: 0; }
+}
+/* 작은 글자 대비 확보용으로 그룹색보다 진한 톤 */
+.g-core .people .role { background: #13789F; }
+.g-ops .people .role { background: #B84A10; }
+.g-mfg .people .role { background: var(--mfg); }
+.people .role.role-head { background: var(--navy); }
