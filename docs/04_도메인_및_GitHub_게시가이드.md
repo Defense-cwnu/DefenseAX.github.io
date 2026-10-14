@@ -36,11 +36,11 @@ D.AX_Homepage/
 > `.ac.kr`은 교육기관만 등록할 수 있어 대학 명의로 신청해야 한다. 그럴 바에는 1순위처럼 `changwon.ac.kr`의 하위 도메인을 받는 편이 빠르다.
 
 ### 3순위(바로 쓸 수 있는 무료 주소): GitHub 기본 주소
-- 조직 계정을 `cwnu-dax`로 만들면 → **`https://cwnu-dax.github.io`**
+- 조직 계정을 `DefenseAX`로 만들면 → **`https://defenseax.github.io`**
 - 개인 계정 저장소로 올리면 → `https://<아이디>.github.io/<저장소이름>/`
 - 도메인 연결 전 임시 주소로 쓰고, 나중에 1·2순위 도메인을 붙인다.
 
-**권장 조합**: GitHub 조직 `cwnu-dax` + 저장소 `cwnu-dax.github.io` 로 먼저 공개 → 학교에 `dax.changwon.ac.kr` 연결 요청.
+**권장 조합**: GitHub 조직 `DefenseAX` + 저장소 `DefenseAX.github.io` 로 먼저 공개 → 학교에 `dax.changwon.ac.kr` 연결 요청.
 
 ---
 
@@ -57,13 +57,13 @@ D.AX_Homepage/
 담당자가 바뀌어도 사이트를 넘겨주기 쉽다.
 1. GitHub 오른쪽 위 프로필 사진 → **Your organizations** → **New organization**
 2. **Create a free organization** 선택
-3. Organization name: `cwnu-dax` (다른 이름이면 아래 주소의 `cwnu-dax`를 바꿔 읽는다)
+3. Organization name: `DefenseAX` (다른 이름이면 아래 주소의 `DefenseAX`를 바꿔 읽는다)
 4. Contact email: 사업단 메일, "This organization belongs to: A business or institution" → 기관명 `Changwon National University`
 5. 함께 관리할 교직원을 **People → Invite member**로 초대
 
 ### 3-2. 저장소(Repository) 만들기
 1. 조직 페이지 → **Repositories → New repository**
-2. Repository name: **`cwnu-dax.github.io`** (조직 이름 + `.github.io`를 정확히 입력해야 루트 주소가 된다)
+2. Repository name: **`DefenseAX.github.io`** (조직 이름 + `.github.io`를 정확히 입력해야 루트 주소가 된다. 웹 주소는 소문자로 바뀌어 `https://defenseax.github.io`가 된다)
    - 개인 계정이면 `dax-homepage`처럼 아무 이름이나 가능 → 주소는 `https://<아이디>.github.io/dax-homepage/`
 3. **Public** 선택 (무료 플랜에서 Pages는 공개 저장소만 가능)
 4. "Add a README file"은 체크하지 않는다(이 폴더에 이미 있다) → **Create repository**
@@ -96,7 +96,7 @@ git commit -m "D.AX대학원 홈페이지 첫 게시"
 ```
 
 ```bash
-git remote add origin https://github.com/cwnu-dax/cwnu-dax.github.io.git
+git remote add origin https://github.com/DefenseAX/DefenseAX.github.io.git
 ```
 
 ```bash
@@ -109,7 +109,7 @@ git push -u origin main
 1. 저장소 → **Settings** → 왼쪽 **Pages**
 2. **Build and deployment → Source: Deploy from a branch**
 3. **Branch: `main`**, 폴더 **`/ (root)`** → **Save**
-4. 1~3분 뒤 같은 화면 위쪽에 "Your site is live at https://cwnu-dax.github.io/" 가 뜬다
+4. 1~3분 뒤 같은 화면 위쪽에 "Your site is live at https://defenseax.github.io/" 가 뜬다
 5. 진행 상황은 저장소 **Actions** 탭의 "pages build and deployment"에서 확인(초록 체크 = 완료)
 
 ### 3-5. 내용 수정하기
@@ -134,7 +134,7 @@ GitHub Pages는 저장소의 모든 파일을 공개한다. `docs/`의 분석 �
 
    | 호스트 | 타입 | 값 |
    |---|---|---|
-   | `dax` | `CNAME` | `cwnu-dax.github.io.` |
+   | `dax` | `CNAME` | `defenseax.github.io.` |
 
 2. 저장소 **Settings → Pages → Custom domain**에 `dax.changwon.ac.kr` 입력 → **Save**
    (저장하면 저장소에 `CNAME` 파일이 자동으로 생긴다. Git으로 작업 중이면 `git pull`로 받아 둔다)
@@ -148,7 +148,7 @@ GitHub Pages는 저장소의 모든 파일을 공개한다. `docs/`의 분석 �
 
   | 호스트 | 타입 | 값 |
   |---|---|---|
-  | `www` | `CNAME` | `cwnu-dax.github.io.` |
+  | `www` | `CNAME` | `defenseax.github.io.` |
 
 - `cwnudax.kr`(맨 앞 www 없는 주소) 용: A 레코드 4개, 필요하면 AAAA 4개
 
@@ -166,13 +166,13 @@ GitHub Pages는 저장소의 모든 파일을 공개한다. `docs/`의 분석 �
 그다음 4-1의 2~4단계와 같이 Custom domain에 `www.cwnudax.kr`을 넣고 HTTPS를 켠다. 두 주소를 모두 등록해 두면 GitHub가 서로 넘겨준다.
 
 ### 4-3. 도메인 탈취 방지(권장)
-조직 **Settings → Pages → Add a domain**에서 도메인을 "verified"로 등록한다. GitHub이 알려 주는 `_github-pages-challenge-cwnu-dax` TXT 레코드를 DNS에 추가하면, 다른 사람이 같은 도메인을 자기 저장소에 붙이지 못한다.
+조직 **Settings → Pages → Add a domain**에서 도메인을 "verified"로 등록한다. GitHub이 알려 주는 `_github-pages-challenge-DefenseAX` TXT 레코드를 DNS에 추가하면, 다른 사람이 같은 도메인을 자기 저장소에 붙이지 못한다.
 
 ### 4-4. 연결 확인
 ```bash
 nslookup dax.changwon.ac.kr
 ```
-결과에 `cwnu-dax.github.io` 또는 `185.199.x.153`이 보이면 연결된 것이다.
+결과에 `defenseax.github.io` 또는 `185.199.x.153`이 보이면 연결된 것이다.
 
 ---
 
